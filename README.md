@@ -4,6 +4,19 @@
 
 See the documentation for installation instructions and usage: [speaches.ai](https://speaches.ai/)
 
+## Repository-specific deployment profile
+
+This repository is configured for:
+
+- `main` as the default branch
+- CPU runtime deployment on Coolify via Dockerfile
+- API key protected public access (`API_KEY` required)
+- UI disabled in production (`ENABLE_UI=false`)
+- STT preload model: `Systran/faster-whisper-medium`
+- Client-side language contract: requests should use only `tr` or `en`
+
+See [docs/deployment-coolify.md](docs/deployment-coolify.md) and [.env.production.example](.env.production.example).
+
 ## Features:
 
 - OpenAI API compatible. All tools and SDKs that work with OpenAI's API should work with `speaches`.
