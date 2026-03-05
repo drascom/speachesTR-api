@@ -11,7 +11,7 @@ services:
       args:
         BASE_IMAGE: nvidia/cuda:12.6.3-cudnn-runtime-ubuntu24.04
     volumes:
-      - hf-hub-cache:/home/ubuntu/.cache/huggingface/hub
+      - ./.cache/huggingface:/home/ubuntu/.cache/huggingface/hub
     deploy:
       resources:
         reservations:
@@ -19,5 +19,3 @@ services:
             - driver: nvidia
               count: all
               capabilities: [gpu]
-volumes:
-  hf-hub-cache:

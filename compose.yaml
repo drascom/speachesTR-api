@@ -16,7 +16,7 @@ services:
           path: ./uv.lock
         - action: sync+restart
           path: ./src
-          target: /home/ubuntu/speaches/src
+          target: /opt/speachesTR-api
     env_file:
       - path: .env
         required: false

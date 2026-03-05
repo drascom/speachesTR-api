@@ -8,8 +8,6 @@ services:
     extends:
       file: compose.cuda.yaml
       service: speaches
-    volumes:
-      - hf-hub-cache:/home/ubuntu/.cache/huggingface/hub
     deploy:
       resources:
         reservations:
@@ -20,5 +18,3 @@ services:
               driver: cdi
               device_ids:
                 - nvidia.com/gpu=all
-volumes:
-  hf-hub-cache:
